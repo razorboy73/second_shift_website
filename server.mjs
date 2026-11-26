@@ -1,7 +1,8 @@
 // Second Shift Ops web server: serves public/ and handles POST /api/contact.
 // Email delivery (set in Railway variables, see .env.example):
-//   RESEND_API_KEY        -> sends through Resend's HTTPS API (recommended on Railway)
-//   SMTP_HOST/PORT/USER/PASS -> sends through any SMTP server via nodemailer
+//   GMAIL_SCRIPT_URL + GMAIL_SCRIPT_SECRET -> sends from your Gmail via a Google Apps Script
+//                                           web app (google-apps-script/Code.gs). Works on any Railway plan.
+//   SMTP_HOST/PORT/USER/PASS -> sends through an SMTP server via nodemailer (Railway Pro and above only)
 // With neither set, submissions are logged to the console (fine for local dev).
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
@@ -11,7 +12,6 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), 'public');
 const PORT = Number(process.env.PORT) || 3000;
 const CONTACT_TO = process.env.CONTACT_TO || 'joshadamkerbel@gmail.com';
-const MAIL_FROM = process.env.MAIL_FROM || 'Second Shift Ops Website <onboarding@resend.dev>';
 const IS_PROD = process.env.NODE_ENV === 'production' || !!process.env.RAILWAY_ENVIRONMENT;
 
 const MIME = {
@@ -113,14 +113,22 @@ function buildEmail(f) {
 
 async function deliver(form) {
   const { subject, text, html } = buildEmail(form);
-  if (process.env.RESEND_API_KEY) {
-    const r = await fetch('https://api.resend.com/emails', {
+  if (process.env.GMAIL_SCRIPT_URL) {
+    // Google Apps Script web app (google-apps-script/Code.gs). Google answers the POST with a
+    // redirect to the script's output; fetch follows it and we read the JSON result.
+    const r = await fetch(process.env.GMAIL_SCRIPT_URL, {
       method: 'POST',
-      headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ from: MAIL_FROM, to: [CONTACT_TO], reply_to: form.email, subject, text, html }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ secret: process.env.GMAIL_SCRIPT_SECRET, replyTo: form.email, subject, text, html }),
+      redirect: 'follow',
+      signal: AbortSignal.timeout(20_000),
     });
-    if (!r.ok) throw new Error(`Resend ${r.status}: ${await r.text()}`);
-    return 'resend';
+    const body = await r.text();
+    let result = {};
+    try { result = JSON.parse(body); } catch { /* Google returned an HTML error page */ }
+    if (!r.ok || !result.ok) throw new Error(`Gmail script ${r.status}: ${result.error || body.slice(0, 200)}`);
+    if (typeof result.remaining === 'number' && result.remaining < 10) console.warn(`[contact] Gmail daily quota low: ${result.remaining} left`);
+    return 'gmail-script';
   }
   if (process.env.SMTP_HOST) {
     const { default: nodemailer } = await import('nodemailer');
@@ -132,7 +140,7 @@ async function deliver(form) {
     await transport.sendMail({ from: process.env.MAIL_FROM || process.env.SMTP_USER, to: CONTACT_TO, replyTo: form.email, subject, text, html });
     return 'smtp';
   }
-  if (IS_PROD) throw new Error('No email provider configured (set RESEND_API_KEY or SMTP_HOST).');
+  if (IS_PROD) throw new Error('No email provider configured (set GMAIL_SCRIPT_URL and GMAIL_SCRIPT_SECRET).');
   console.log('\n[contact] No email provider configured; logging submission instead:\n' + text);
   return 'console';
 }
@@ -194,6 +202,6 @@ const server = createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  const mail = process.env.RESEND_API_KEY ? 'Resend' : process.env.SMTP_HOST ? 'SMTP' : 'console (no provider set)';
-  console.log(`Second Shift Ops running on http://localhost:${PORT}  |  contact email -> ${CONTACT_TO} via ${mail}`);
+  const mail = process.env.GMAIL_SCRIPT_URL ? 'Gmail (Apps Script)' : process.env.SMTP_HOST ? 'SMTP' : 'console (no provider set)';
+  console.log(`Second Shift Ops running on http://localhost:${PORT}  |  contact email via ${mail}`);
 });
