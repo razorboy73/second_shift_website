@@ -30,16 +30,16 @@ The generated HTML in `public/` is committed, so Railway does not need a build s
 
 `POST /api/contact` validates the submission (with a honeypot and a rate limit of 5 per IP per 10 minutes), then emails it with the visitor's address as reply-to.
 
-### Gmail via Google Apps Script (recommended)
+### Google Workspace via Apps Script (recommended)
 
-A small script in your Google account sends each inquiry from your own Gmail. The server calls it over HTTPS, which Railway allows on every plan (Railway blocks SMTP below Pro). Free; Gmail allows about 100 of these emails a day.
+A small script in the josh@secondshiftops.co Google Workspace account sends each inquiry from that mailbox. The server calls it over HTTPS, which Railway allows on every plan (Railway blocks SMTP below Pro). No extra cost; Workspace allows about 1,500 script emails a day.
 
-1. Sign in to the Gmail account that should send the emails and go to [script.google.com](https://script.google.com) → **New project**. Name it "Second Shift Ops mailer".
+1. Sign in as josh@secondshiftops.co and go to [script.google.com](https://script.google.com) → **New project**. Name it "Second Shift Ops mailer".
 2. Replace the contents of `Code.gs` with [`google-apps-script/Code.gs`](google-apps-script/Code.gs) and save.
 3. Choose `sendTestEmail` in the function menu and click **Run**. Approve the permission prompt (Google warns the app is unverified because you wrote it: **Advanced → Go to project**). Check that the test email arrived.
-4. **Project Settings** (gear icon) → **Script properties** → add `SHARED_SECRET` with a long random value. Optionally add `CONTACT_TO` if inquiries should go to a different address than this Gmail.
-5. **Deploy → New deployment** → type **Web app**. Execute as: **Me**. Who has access: **Anyone**. Deploy and copy the web app URL (ends in `/exec`).
-6. In Railway (or `.env` locally) set `GMAIL_SCRIPT_URL` to that URL and `GMAIL_SCRIPT_SECRET` to the same secret.
+4. **Project Settings** (gear icon) → **Script properties** → add `SHARED_SECRET` with a long random value.
+5. **Deploy → New deployment** → type **Web app**. Execute as: **Me**. Who has access: **Anyone** (not "Anyone within secondshiftops.co"). Deploy and copy the web app URL (ends in `/exec`).
+6. In Railway (or `.env` locally) set `GMAIL_SCRIPT_URL` to that URL and `GMAIL_SCRIPT_SECRET` to the same secret. Inquiries go to `CONTACT_TO` (default josh@secondshiftops.co).
 
 "Anyone" only means the URL can be called without a Google login; the script ignores any request without the secret. If you edit the script later, use **Deploy → Manage deployments → Edit → New version** so the URL stays the same.
 

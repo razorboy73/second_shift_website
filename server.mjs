@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), 'public');
 const PORT = Number(process.env.PORT) || 3000;
-const CONTACT_TO = process.env.CONTACT_TO || 'joshadamkerbel@gmail.com';
+const CONTACT_TO = process.env.CONTACT_TO || 'josh@secondshiftops.co';
 const IS_PROD = process.env.NODE_ENV === 'production' || !!process.env.RAILWAY_ENVIRONMENT;
 
 const MIME = {
@@ -119,7 +119,7 @@ async function deliver(form) {
     const r = await fetch(process.env.GMAIL_SCRIPT_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ secret: process.env.GMAIL_SCRIPT_SECRET, replyTo: form.email, subject, text, html }),
+      body: JSON.stringify({ secret: process.env.GMAIL_SCRIPT_SECRET, to: CONTACT_TO, replyTo: form.email, subject, text, html }),
       redirect: 'follow',
       signal: AbortSignal.timeout(20_000),
     });

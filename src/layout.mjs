@@ -11,7 +11,7 @@ const V = { brand: ver('brand_assets/brand.css'), css: ver('public/css/site.css'
 export const SITE = {
   name: 'Second Shift Ops',
   url: 'https://secondshiftops.co',
-  email: 'joshadamkerbel@gmail.com',
+  email: 'josh@secondshiftops.co',
   tagline: 'Less grunt work. More great work.',
   promise: 'Intelligent workflow automation for businesses with better things to do.',
 };
