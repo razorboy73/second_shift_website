@@ -126,7 +126,11 @@ async function deliver(form) {
     const body = await r.text();
     let result = {};
     try { result = JSON.parse(body); } catch { /* Google returned an HTML error page */ }
-    if (!r.ok || !result.ok) throw new Error(`Gmail script ${r.status}: ${result.error || body.slice(0, 200)}`);
+    if (!r.ok || !result.ok) {
+      // Google error and sign-in pages are HTML: log their visible text, not the markup.
+      const page = body.replace(/<(script|style)[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      throw new Error(`Gmail script ${r.status} (${r.url}): ${result.error || page.slice(0, 300)}`);
+    }
     if (typeof result.remaining === 'number' && result.remaining < 10) console.warn(`[contact] Gmail daily quota low: ${result.remaining} left`);
     return 'gmail-script';
   }
