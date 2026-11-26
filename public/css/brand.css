@@ -1,0 +1,62 @@
+/* Second Shift Ops brand variables and baseline components.
+ * Brand direction is approved. Logo, iconography, button, and layout values
+ * are proposed standards pending final design review and vector asset handoff.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap');
+
+:root {
+  --color-navy: #0B1020;
+  --color-teal: #18C5C9;
+  --color-aqua: #A9E7EA;
+  --color-slate: #8B93A6;
+  --color-white: #F5F7FA;
+  --color-teal-dark: #087C80;
+  --color-text-secondary: #667085;
+  --color-hover: #42D6D9;
+  --color-pressed: #10A9AD;
+  --color-disabled: #293140;
+  --font-heading: 'Montserrat', Arial, sans-serif;
+  --font-body: 'Inter', Arial, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --radius-button: 8px;
+  --radius-input: 8px;
+  --radius-icon: 12px;
+  --radius-card: 16px;
+  --content-width: 1280px;
+  --spacing-unit: 8px;
+  --section-spacing: 96px;
+  --transition-fast: 150ms ease;
+  --transition: 180ms ease;
+  --transition-slow: 200ms ease;
+  --focus-ring: 0 0 0 3px rgba(24, 197, 201, 0.4);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--color-navy); background: var(--color-white); font-family: var(--font-body); font-size: 16px; line-height: 1.55; }
+h1, h2, h3, h4, h5, h6 { margin: 0; color: inherit; font-family: var(--font-heading); line-height: 1.08; }
+h1 { font-size: clamp(3.5rem, 7vw, 4.5rem); font-weight: var(--font-weight-extrabold); letter-spacing: -0.04em; }
+h2 { font-size: clamp(2.25rem, 5vw, 2.5rem); font-weight: var(--font-weight-bold); letter-spacing: -0.03em; }
+h3 { font-size: clamp(1.5rem, 3vw, 1.75rem); font-weight: var(--font-weight-semibold); }
+a { color: var(--color-teal-dark); }
+.container { width: min(100% - 2rem, var(--content-width)); margin-inline: auto; }
+.section { padding-block: var(--section-spacing); }
+.button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 0.5rem; padding-inline: 24px; border: 1px solid transparent; border-radius: var(--radius-button); font-family: var(--font-body); font-size: 16px; font-weight: var(--font-weight-semibold); line-height: 1; text-decoration: none; cursor: pointer; transition: background-color var(--transition), border-color var(--transition), color var(--transition), transform var(--transition-fast); }
+.button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+.button:hover { transform: translateY(-1px); }
+.button:active { transform: translateY(0); }
+.button--primary { color: var(--color-navy); background: var(--color-teal); }
+.button--primary:hover { background: var(--color-hover); }
+.button--primary:active { background: var(--color-pressed); }
+.button--secondary { color: var(--color-teal-dark); background: transparent; border-color: var(--color-teal-dark); }
+.button--secondary:hover { color: var(--color-navy); background: rgba(24, 197, 201, 0.1); }
+.button--tertiary { min-height: auto; padding-inline: 0; color: var(--color-teal-dark); background: transparent; }
+.button:disabled, .button[aria-disabled='true'] { color: var(--color-slate); background: var(--color-disabled); border-color: transparent; cursor: not-allowed; transform: none; }
+.icon-container { display: inline-grid; width: 48px; height: 48px; place-items: center; color: var(--color-teal); background: rgba(24, 197, 201, 0.1); border-radius: var(--radius-icon); }
+.icon-container svg { width: 24px; height: 24px; stroke-width: 1.875; stroke-linecap: round; stroke-linejoin: round; }
+@media (min-width: 768px) { .container { width: min(100% - 4rem, var(--content-width)); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; } }

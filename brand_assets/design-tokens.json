@@ -1,0 +1,111 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "second-shift-ops",
+  "version": "1.0.0",
+  "status": {
+    "brand_direction": "approved",
+    "logo_assets": "not_supplied",
+    "logo_rules": "proposed_standard",
+    "iconography": "proposed_standard",
+    "buttons": "proposed_standard",
+    "website_layout": "proposed_standard"
+  },
+  "brand": {
+    "name": "Second Shift Ops",
+    "domain": "secondshiftops.co",
+    "tagline": "Less grunt work. More great work.",
+    "promise": "Intelligent workflow automation for businesses with better things to do.",
+    "positioning": "Eliminate repetitive work, reclaim time, and improve operational efficiency.",
+    "personality": ["intelligent", "confident", "pragmatic"],
+    "voice": ["direct", "conversational", "understated"]
+  },
+  "color": {
+    "navy": { "value": "#0B1020", "role": "primary dark background and text" },
+    "teal": { "value": "#18C5C9", "role": "primary accent and actions" },
+    "aqua": { "value": "#A9E7EA", "role": "soft accent and highlights" },
+    "slate": { "value": "#8B93A6", "role": "muted text and metadata" },
+    "white": { "value": "#F5F7FA", "role": "light surfaces and reversed text" },
+    "tealDark": { "value": "#087C80", "role": "accessible light-theme accent" },
+    "textSecondary": { "value": "#667085", "role": "secondary text on light surfaces" },
+    "hover": { "value": "#42D6D9", "role": "hover state" },
+    "pressed": { "value": "#10A9AD", "role": "pressed state" },
+    "disabled": { "value": "#293140", "role": "disabled controls on dark surfaces" }
+  },
+  "typography": {
+    "heading": { "family": "Montserrat", "fallback": ["Arial", "sans-serif"] },
+    "body": { "family": "Inter", "fallback": ["Arial", "sans-serif"] },
+    "hero": { "family": "Montserrat", "weight": 800, "fontSize": { "min": "56px", "max": "72px" } },
+    "h2": { "family": "Montserrat", "weight": 700, "fontSize": { "min": "36px", "max": "40px" } },
+    "h3": { "family": "Montserrat", "weight": 600, "fontSize": { "min": "24px", "max": "28px" } },
+    "bodyText": { "family": "Inter", "weight": 400, "fontSize": { "min": "16px", "max": "18px" } },
+    "button": { "family": "Inter", "weight": 600, "fontSize": { "min": "15px", "max": "16px" } },
+    "caption": { "family": "Inter", "weight": 400, "fontSize": { "min": "12px", "max": "14px" } },
+    "navigation": { "family": "Inter", "weight": 500, "fontSize": { "min": "14px", "max": "16px" } }
+  },
+  "logo": {
+    "concept": "S-shaped system of two interconnected workflow arrows",
+    "assetStatus": "final vector assets not supplied",
+    "clearSpace": { "status": "proposed_standard", "formula": "X = 25% of the S symbol height", "minimum": "1X on all sides" },
+    "minimumSize": {
+      "horizontal": { "digital": "180px", "print": "45mm" },
+      "stacked": { "digital": "120px", "print": "30mm" },
+      "symbol": { "digital": "24px", "print": "8mm" },
+      "favicon": { "digital": "16px", "print": null }
+    },
+    "allowedTreatments": ["white lettering on dark backgrounds", "navy lettering on light backgrounds"],
+    "prohibitedTreatments": ["stretching", "rotation", "recolouring", "outlines", "bevels", "shadows"]
+  },
+  "iconography": {
+    "status": "proposed_standard",
+    "library": "Lucide",
+    "style": "outline with rounded line caps",
+    "strokeWidth": "1.75px–2px",
+    "standardSize": "24px",
+    "featureSize": "32px–48px",
+    "primaryColor": "{color.teal}",
+    "containerRadius": "12px",
+    "containerBackground": "{color.teal} at 8%–12% opacity",
+    "avoid": ["cartoon robots", "excessive sparkles", "emoji-style graphics", "generic AI imagery"]
+  },
+  "button": {
+    "status": "proposed_standard",
+    "radius": "8px",
+    "paddingInline": "24px",
+    "height": "48px",
+    "heroHeight": "56px",
+    "font": "{typography.button}",
+    "transition": "150ms–200ms ease",
+    "primary": { "label": "Reclaim your time", "background": "{color.teal}", "text": "{color.navy}" },
+    "secondary": { "label": "Explore our solutions", "border": "{color.tealDark}", "text": "{color.tealDark}" },
+    "tertiary": { "label": "See how it works", "style": "text link" },
+    "hoverBackground": "{color.hover}",
+    "pressedBackground": "{color.pressed}",
+    "disabledExample": "Book a consultation"
+  },
+  "layout": {
+    "status": "proposed_standard",
+    "contentMaxWidth": "1280px",
+    "desktopColumns": 12,
+    "spacingUnit": "8px",
+    "sectionSpacing": { "desktop": "80px–120px", "default": "96px" },
+    "cardRadius": "16px",
+    "inputRadius": "8px",
+    "shadows": "minimal or none",
+    "animation": "subtle workflow-inspired motion"
+  },
+  "messaging": {
+    "primaryCta": "Reclaim your time",
+    "secondaryCta": "Explore our solutions",
+    "narrative": "Every business has two kinds of work: the work that moves it forward and the work that gets in the way. Second Shift Ops automates repetitive processes so people can return to the work they started the business to do."
+  },
+  "assets": {
+    "logosDirectory": "logos/",
+    "expectedFiles": [
+      "second-shift-ops-horizontal.svg",
+      "second-shift-ops-stacked.svg",
+      "second-shift-ops-symbol.svg",
+      "second-shift-ops-favicon.svg"
+    ],
+    "note": "Expected final vectors are listed for handoff; they are not included in this package."
+  }
+}
