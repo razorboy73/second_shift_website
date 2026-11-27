@@ -7,13 +7,13 @@ const pillars = [
   {
     id: 'clients',
     title: 'Win more clients',
-    intro: 'Most small businesses don’t lose work to competitors. They lose it to slow replies and follow-ups nobody had time to send.',
+    intro: 'Plenty of new work is lost to slow replies and follow-ups nobody had time to send.',
     items: [
       ['Find prospects worth contacting', 'AI researches lists like expired listings, new businesses in your area or old inquiries, and surfaces the ones that fit.'],
       ['Personal outreach without the hours', 'A first draft written for each prospect, approved by you before anything is sent.'],
       ['Every inquiry answered in minutes', 'AI replies, asks the qualifying questions and books the call, including evenings and weekends.'],
       ['Follow-up until there’s an answer', 'Quotes and proposals chased politely and on schedule, so deals don’t go quiet.'],
-      ['Referrals and reviews, on cue', 'Happy clients asked at the right moment, every time.'],
+      ['Referrals and reviews', 'Happy clients asked for a review or referral when the job is done.'],
     ],
   },
   {
@@ -22,10 +22,10 @@ const pillars = [
     intro: 'The other half of the week goes to work that keeps the lights on: reading, typing, sorting, chasing and reporting.',
     items: [
       ['Documents read for you', 'Invoices, receipts, contracts and forms read, sorted and entered into the right system.'],
-      ['An inbox that triages itself', 'Email sorted, summarized and routed, with routine replies drafted and waiting.'],
-      ['Reports written, not assembled', 'Numbers pulled from your systems and summarized in plain English.'],
+      ['An inbox that triages itself', 'Email sorted and routed, with routine replies drafted and waiting.'],
+      ['Reports written for you', 'Numbers pulled from your systems and summarized in plain English.'],
       ['Systems that stay in sync', 'Details entered once and updated everywhere: CRM, accounting, scheduling.'],
-      ['Scheduling, reminders and invoicing', 'The routine admin that runs on its own once it’s set up properly.'],
+      ['Scheduling, reminders and invoicing', 'Routine admin that runs automatically once it’s set up.'],
     ],
   },
 ];
@@ -72,7 +72,7 @@ const index = [
     name: 'Salons & spas', icon: 'scissors', link: '/solutions/salons-spas/',
     rows: [
       ['clients', 'Booking messages answered hours later', 'An AI assistant that answers and books on Instagram and your website'],
-      ['clients', 'Regulars quietly drifting away', 'Personal win-back notes based on each client’s service interval'],
+      ['clients', 'Regulars drifting away', 'Personal win-back notes based on each client’s service interval'],
       ['ops', 'No-shows and empty slots', 'Reminders, deposits and automatic waitlist offers'],
       ['ops', 'Commissions tallied in a spreadsheet', 'Payroll summaries compiled per stylist'],
     ],
@@ -101,7 +101,7 @@ const index = [
       ['clients', 'Bids take nights and weekends', 'AI drafts scopes and bid documents from site notes and plans'],
       ['clients', 'Clients anxious between milestones', 'Weekly progress updates written from daily logs and photos'],
       ['ops', 'Schedule changes mean a round of calls', 'Subs and suppliers updated at once'],
-      ['ops', 'Change orders agreed verbally', 'Documented, priced and signed before work starts'],
+      ['ops', 'Change orders agreed verbally', 'Priced and signed before work starts'],
     ],
   },
 ];
@@ -110,7 +110,7 @@ export const services = [
   ['search', 'AI readiness review', 'We map how work and new business flow through your company, find where AI will save the most time or win the most work, and flag the risks. You get a prioritized plan in plain English.'],
   ['plug', 'Build & implement', 'We build the AI workflows on the tools you already use, test them on real cases, and put a person’s approval wherever judgment matters.'],
   ['users', 'Team training', 'Hands-on sessions that teach your team to use tools like ChatGPT, Claude or Microsoft Copilot safely and well in their own daily work.'],
-  ['lifeBuoy', 'Ongoing support', 'A monthly plan to monitor, tune and extend your automations as your business and the AI tools change.'],
+  ['lifeBuoy', 'Ongoing support', 'A monthly plan to keep your automations working and add new ones as your business and the AI tools change.'],
 ];
 
 // Training & enablement
@@ -131,19 +131,19 @@ const trainingRoles = [
 ];
 
 const approach = [
-  ['Problem first, tool second.', 'We start with where time and revenue are leaking, not with whichever AI tool is trending this month.'],
+  ['Problem first, tool second.', 'We start by finding where time and revenue are leaking, then pick the tool that fits.'],
   ['Your data stays yours.', 'Business-grade AI services, configured so your data isn’t used to train models, with access limited to what each workflow needs.'],
   ['People approve what matters.', 'AI drafts, reads, sorts and suggests. Anything client-facing or consequential waits for a person.'],
-  ['Measured, not assumed.', 'We track hours saved and inquiries won, and change or switch off anything that isn’t earning its place.'],
+  ['We measure what it saves.', 'We track hours saved and inquiries won, and change or switch off anything that isn’t earning its place.'],
   ['Your team stays in charge.', 'Training and plain-English documentation, so nobody depends on a black box, including us.'],
 ];
 
 const faqs = [
-  { q: 'What does using AI “properly” actually mean?', a: 'Starting with a real business problem, choosing the right tool for it, protecting your data, putting a person’s review wherever a mistake would be costly, and measuring whether it actually saves time or wins business. If it doesn’t, we change it or switch it off.' },
+  { q: 'What does using AI “properly” mean?', a: 'Starting with a real business problem, choosing the right tool for it, protecting your data, putting a person’s review wherever a mistake would be costly, and measuring whether it saves time or wins business. If it doesn’t, we change it or switch it off.' },
   { q: 'Is our client data safe with AI?', a: 'We use business-grade AI services configured so your data isn’t used to train models, limit each workflow’s access to what it needs, and document where data goes. For regulated work like legal and accounting, we design around your professional obligations.' },
-  { q: 'Will AI replace my staff?', a: 'That isn’t the goal. The aim is to take repetitive work off your team so the people you have can spend more time with clients and handle more work.' },
+  { q: 'Will AI replace my staff?', a: 'No. The aim is to take repetitive work off your team so they can spend more time with clients and take on more work.' },
   { q: 'Which AI tools do you use?', a: 'Whatever fits the job: models from OpenAI, Anthropic and Microsoft, the AI features already built into your software, and automation platforms such as Zapier, Make or n8n to connect them. We’re not tied to any vendor.' },
-  { q: 'Do we need to be technical?', a: 'No. We handle the technical side and train your team on the parts they’ll use. Most workflows run in the background and show up in the email, text or software you already use.' },
+  { q: 'Do we need to be technical?', a: 'No. We handle the technical side and train your team on the parts they’ll use. The workflows run in the background and show up in the email, text or software you already use.' },
   { q: 'Where should we start?', a: 'Usually with an AI readiness review. It shows where AI will help most in your business, what to do first and what it will cost, before you commit to building anything.' },
   { q: 'What does it cost?', a: 'It depends on scope. After our first conversation you’ll get a clear quote, so you can weigh it against the hours and business you’ll get back.' },
 ];
@@ -224,7 +224,7 @@ ${panels}
   <div class="container">
     <div class="section-intro section-intro--dark">
       <h2 id="services-heading" class="section-title">How we work with you.</h2>
-      <p>Most clients start with a readiness review and carry on from there, but you can start at any step.</p>
+      <p>A readiness review is the usual first step, but you can start at any stage.</p>
     </div>
     <ol class="track">
 ${services
@@ -257,7 +257,7 @@ ${trainingSteps.map(([t, d], n) => `          <li><span class="training__num">${
         <figcaption><h3 class="training__subhead">Same tool, better instructions</h3></figcaption>
         <div class="prompt-ex__pair">
           <div class="prompt-ex__item">
-            <p class="prompt-ex__label">What most people type</p>
+            <p class="prompt-ex__label">A typical first try</p>
             <blockquote class="prompt-ex__prompt prompt-ex__prompt--before">Write an email to a client about missing documents.</blockquote>
           </div>
           <div class="prompt-ex__item">
@@ -265,7 +265,7 @@ ${trainingSteps.map(([t, d], n) => `          <li><span class="training__num">${
             <blockquote class="prompt-ex__prompt">I’m an accountant writing to a long-time client who owns a small restaurant. Their return is due in two weeks and we’re still missing their October and November bank statements and one 1099. Write a short, friendly email asking for these by Friday. Plain language, no jargon, and list the missing items as bullets.</blockquote>
           </div>
         </div>
-        <p class="prompt-ex__note">The first gets a generic template. The second gets an email you can send after a quick read. Most of good AI use is this: knowing what context to give it, and what to check before anything goes out.</p>
+        <p class="prompt-ex__note">The first gets a generic template. The second gets an email you can send after a quick read. Training teaches people what context to give, and what to check before anything goes out.</p>
       </figure>
     </div>
     <div class="training__roles">
@@ -285,7 +285,7 @@ ${trainingRoles.map(([r, d]) => `        <div class="roles__row"><dt>${esc(r)}</
   <div class="container approach__grid">
     <div class="approach__head">
       <h2 id="approach-heading" class="section-title">AI done properly.</h2>
-      <p>Plenty of businesses have tried an AI tool and quietly stopped using it. The difference is rarely the technology. It’s how it was chosen, set up and checked.</p>
+      <p>Plenty of businesses have tried an AI tool and stopped using it. The usual cause is how the tool was chosen, set up and checked.</p>
       <a class="button button--secondary" href="#contact">Book a consultation</a>
     </div>
     <ul class="approach__list">

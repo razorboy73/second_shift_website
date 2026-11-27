@@ -17,10 +17,10 @@ export const industries = [
     formIndustry: 'Accounting or bookkeeping',
     title: 'AI workflow automation for accounting & bookkeeping firms',
     description:
-      'Use AI properly in your accounting or bookkeeping firm: answer and qualify new inquiries, collect and read client documents, and draft reports, with your team approving what matters.',
+      'AI for accounting and bookkeeping firms: replies to new inquiries, collects and reads client documents, and drafts monthly reports. Your team approves anything that goes to a client.',
     eyebrow: 'For accounting & bookkeeping firms',
     headline: 'Put AI to work on the busywork of busy season.',
-    sub: 'We help accounting and bookkeeping firms use AI properly: answering new inquiries, collecting and reading client documents, and drafting reports, with your team approving anything that matters.',
+    sub: 'We set up AI in accounting and bookkeeping firms to answer new inquiries, collect and read client documents, and draft monthly reports. Your team approves anything a client will see.',
     board: {
       setting: 'A Tuesday in March at a 6-person firm',
       day: [
@@ -49,21 +49,21 @@ export const industries = [
     ],
     workflows: [
       { group: 'clients', icon: 'inbox', title: 'Inquiry response & qualification', body: 'New inquiries get a reply in minutes. AI asks the right questions (entity type, services, timing) and books qualified prospects straight into your calendar.', check: 'Anything unclear is routed to a partner.' },
-      { group: 'clients', icon: 'fileText', title: 'Proposals & engagement letters', body: 'AI drafts the proposal from your discovery-call notes. Once it’s signed, onboarding starts on its own: folders, portal invite, checklist.', check: 'You set the scope and the fee.' },
-      { group: 'clients', icon: 'star', title: 'Referral & review requests', body: 'When a return is filed and the client is happy, a personal thank-you and referral ask goes out at the right moment.', check: 'You approve the wording once.' },
+      { group: 'clients', icon: 'fileText', title: 'Proposals & engagement letters', body: 'AI drafts the proposal from your discovery-call notes. When the client signs, their folder, portal invite and onboarding checklist are created automatically.', check: 'You set the scope and the fee.' },
+      { group: 'clients', icon: 'star', title: 'Referral & review requests', body: 'After a return is filed, the client gets a personal thank-you and a request for a referral or review.', check: 'You approve the wording once.' },
       { group: 'ops', icon: 'search', title: 'Document collection that reads', body: 'AI recognizes uploaded W-2s, 1099s and K-1s, files them, updates the checklist and keeps reminding until the file is complete.', check: 'Unreadable or unexpected documents go to a person.' },
-      { group: 'ops', icon: 'layers', title: 'Bookkeeping prep', body: 'Receipts and transactions categorized against each client’s history, with anomalies flagged instead of guessed at.', check: 'Unusual items wait for review.' },
-      { group: 'ops', icon: 'chart', title: 'Monthly reporting packs', body: 'Figures pulled from QuickBooks or Xero and a first draft of the commentary written, so review takes minutes, not an afternoon.', check: 'Nothing reaches a client before you sign off.' },
+      { group: 'ops', icon: 'layers', title: 'Bookkeeping prep', body: 'Receipts and transactions categorized using each client’s history. Anything that doesn’t fit the pattern is flagged.', check: 'A person decides every flagged item.' },
+      { group: 'ops', icon: 'chart', title: 'Monthly reporting packs', body: 'Figures pulled from QuickBooks or Xero and a first draft of the commentary written, so reviewing each report takes minutes.', check: 'Nothing reaches a client before you sign off.' },
     ],
     beforeAfter: [
       ['New inquiries', 'Answered when someone has a gap', 'Answered in minutes, qualified and booked'],
       ['Document collection', 'One-off emails tracked in a spreadsheet', 'Documents read, filed and chased automatically'],
       ['Monthly client reports', 'Assembled by hand for each client', 'Drafted by AI, reviewed in minutes'],
-      ['Referrals', 'Whenever someone remembers to ask', 'Asked at the right moment, every time'],
+      ['Referrals', 'Whenever someone remembers to ask', 'Asked after every filed return'],
     ],
     tools: ['QuickBooks Online', 'Xero', 'Karbon', 'TaxDome', 'Microsoft 365 & Copilot', 'Google Workspace', 'ChatGPT', 'Claude', 'DocuSign'],
     faq: [
-      { q: 'Is it safe to put client financial data through AI?', a: 'It can be, when it’s set up properly. We use business-grade AI services configured so your data isn’t used to train models, limit access to what each workflow needs, and keep a person reviewing anything that reaches a client.' },
+      { q: 'Is it safe to put client financial data through AI?', a: 'Yes, with the right setup. We use business-grade AI services configured so your data isn’t used to train models, limit access to what each workflow needs, and keep a person reviewing anything that reaches a client.' },
       { q: 'What if the AI gets a number wrong?', a: 'That’s why AI drafts and a person approves. We design each workflow so mistakes get caught before they matter, flag low-confidence results for review, and track accuracy over time.' },
       { q: 'Can we get something in place before tax season?', a: 'Yes, if we start early and start focused. Document collection and inquiry response are usually the best first steps. We plan backwards from your deadlines.' },
     ],
@@ -77,10 +77,10 @@ export const industries = [
     formIndustry: 'Real estate',
     title: 'AI workflow automation for real estate agents & brokerages',
     description:
-      'AI that answers every lead in minutes, researches new prospects, drafts listing content and keeps transactions on schedule. Built for real estate agents and brokerages.',
+      'AI for real estate agents and brokerages: replies to new leads within minutes, researches prospects, drafts listing content and tracks contract deadlines.',
     eyebrow: 'For real estate agents & brokerages',
     headline: 'AI that answers every lead and helps find the next one.',
-    sub: 'We help agents and brokerages use AI properly: replying to and qualifying leads in minutes, researching prospects, and handling the listing and transaction admin, so your time goes to clients and negotiations.',
+    sub: 'We set up AI for agents and brokerages to reply to and qualify leads within minutes, research prospects, and handle listing and transaction paperwork. You spend the time on clients and negotiations.',
     board: {
       setting: 'A Saturday for a solo agent',
       day: [
@@ -110,10 +110,10 @@ export const industries = [
     workflows: [
       { group: 'clients', icon: 'clock', title: 'Speed-to-lead response', body: 'Every new lead gets an immediate, personal reply. AI answers questions about the property, qualifies on timing and financing, and books the showing.', check: 'You take over the moment a lead is ready to talk.' },
       { group: 'clients', icon: 'search', title: 'Prospecting research & outreach', body: 'Expired listings, FSBOs and your farm area researched for you, with personal letters or emails drafted for each owner.', check: 'You approve outreach. Opt-outs and your brokerage’s rules are respected.' },
-      { group: 'clients', icon: 'star', title: 'Past-client & sphere nurture', body: 'Personal market updates about each client’s own home and neighborhood, sent on a steady rhythm so you stay the agent they recommend.', check: 'Written in your voice from templates you approve.' },
+      { group: 'clients', icon: 'star', title: 'Past-client & sphere nurture', body: 'Personal market updates about each client’s own home and neighborhood, sent every few months, so past clients remember who to recommend.', check: 'Written in your voice from templates you approve.' },
       { group: 'ops', icon: 'fileText', title: 'Listing content in minutes', body: 'From your notes and photos, AI drafts the listing description, social posts, email announcement and property page.', check: 'You edit and approve before anything is published.' },
       { group: 'ops', icon: 'calendar', title: 'Transaction timelines', body: 'AI reads the purchase agreement, pulls out the key dates and builds a timeline with reminders to you, your clients, the lender and title.', check: 'You or your TC confirm every date.' },
-      { group: 'ops', icon: 'message', title: 'Showing feedback & seller updates', body: 'Feedback requested after every showing, then summarized into a weekly update your sellers will actually read.', check: 'Sent after a quick read-through.' },
+      { group: 'ops', icon: 'message', title: 'Showing feedback & seller updates', body: 'Feedback requested after every showing, then summarized into a short weekly update for your sellers.', check: 'Sent after a quick read-through.' },
     ],
     beforeAfter: [
       ['New lead response', 'Whenever you get back to your desk', 'Within minutes, qualified, in your voice'],
@@ -123,9 +123,9 @@ export const industries = [
     ],
     tools: ['Follow Up Boss', 'kvCORE', 'Lofty', 'Dotloop', 'SkySlope', 'DocuSign', 'Google Workspace', 'ChatGPT', 'Claude'],
     faq: [
-      { q: 'Will leads know they’re talking to AI?', a: 'We recommend being upfront that an assistant handles first replies, and many buyers appreciate the instant answer. Either way, messages are written in your voice and hand the conversation to you as soon as a lead is ready.' },
+      { q: 'Will leads know they’re talking to AI?', a: 'We recommend telling leads that an assistant sends the first replies. Messages are written in your voice, and the conversation passes to you as soon as a lead is ready to talk.' },
       { q: 'Is AI-written listing copy compliant?', a: 'AI produces the first draft; you stay responsible for the final version. We set it up with your brokerage’s guidelines and fair housing language rules, and nothing publishes without your approval.' },
-      { q: 'Does this work for a solo agent?', a: 'Often best of all. A solo agent has nobody to catch the lead that came in during a showing. Lead response and past-client nurture usually pay off first.' },
+      { q: 'Does this work for a solo agent?', a: 'Yes. A solo agent has nobody else to answer a lead that arrives during a showing. Lead response and past-client follow-up usually pay off first.' },
     ],
   },
   {
@@ -137,10 +137,10 @@ export const industries = [
     formIndustry: 'Legal',
     title: 'AI workflow automation for law firms',
     description:
-      'Use AI properly in your law firm: intake and qualification, conflict check preparation, first drafts and time capture, with attorney review built in.',
+      'AI for small and mid-sized law firms: intake and screening, conflict check preparation, first drafts and time capture, with an attorney reviewing the results.',
     eyebrow: 'For small & mid-sized law firms',
-    headline: 'AI for the intake and paperwork. Not the legal judgment.',
-    sub: 'We help small and mid-sized firms use AI properly: screening and booking new inquiries, preparing conflict checks, producing first drafts and capturing time, with attorney review wherever judgment is required.',
+    headline: 'AI handles intake and paperwork. You keep the judgment.',
+    sub: 'We set up AI for small and mid-sized firms to screen and book new inquiries, prepare conflict checks, produce first drafts and capture billable time. An attorney reviews anything that calls for judgment.',
     board: {
       setting: 'A Monday at a 4-attorney firm',
       day: [
@@ -158,7 +158,7 @@ export const industries = [
         { t: '9:40', text: 'Both letters reviewed and sent', by: 'you' },
       ],
     },
-    painsHeading: 'Your time is billable. The admin around it isn’t.',
+    painsHeading: 'Billable hours keep getting lost to admin.',
     pains: [
       'Prospective clients wait days for a callback while intake forms sit in a shared inbox.',
       'Consultations that don’t retain you never get a follow-up.',
@@ -169,11 +169,11 @@ export const industries = [
     ],
     workflows: [
       { group: 'clients', icon: 'inbox', title: 'Intake & qualification', body: 'AI reads each inquiry, sorts it by practice area and urgency, gathers the facts you need and books a consultation with the right attorney.', check: 'No legal advice is given. An attorney reviews every new matter.' },
-      { group: 'clients', icon: 'message', title: 'Consultation follow-up', body: 'Prospects who haven’t retained you yet get timely, courteous follow-up instead of silence.', check: 'Templates approved by an attorney.' },
+      { group: 'clients', icon: 'message', title: 'Consultation follow-up', body: 'Prospects who haven’t retained you get a courteous follow-up a few days after the consultation.', check: 'Templates approved by an attorney.' },
       { group: 'clients', icon: 'users', title: 'Referral partner updates', body: 'AI drafts short updates on relevant legal changes for the accountants, advisors and past clients who send you work.', check: 'An attorney reviews content before it goes out.' },
-      { group: 'ops', icon: 'search', title: 'Conflict check preparation', body: 'Names and parties from each inquiry checked against existing matters, with likely matches surfaced and explained.', check: 'An attorney clears every conflict.' },
+      { group: 'ops', icon: 'search', title: 'Conflict check preparation', body: 'Names and parties from each inquiry checked against existing matters, with likely matches listed and the reason for each.', check: 'An attorney clears every conflict.' },
       { group: 'ops', icon: 'fileText', title: 'First drafts from your templates', body: 'Engagement letters, routine correspondence and standard agreements drafted from matter data and your own precedents.', check: 'Attorney review before anything is sent or filed.' },
-      { group: 'ops', icon: 'clock', title: 'Time capture', body: 'AI suggests time entries from calendars, emails and documents worked on, so the week doesn’t need reconstructing.', check: 'Attorneys confirm entries before billing.' },
+      { group: 'ops', icon: 'clock', title: 'Time capture', body: 'AI suggests time entries from calendars, emails and documents worked on, so nobody has to rebuild the week from memory at the end of it.', check: 'Attorneys confirm entries before billing.' },
     ],
     beforeAfter: [
       ['New inquiries', 'Callback when someone has a gap', 'Screened, booked and summarized the same day'],
@@ -185,7 +185,7 @@ export const industries = [
     faq: [
       { q: 'How do you handle confidentiality with AI?', a: 'We design around your professional obligations: business-grade AI services configured so client data isn’t used for training, access limited to what each workflow needs, and an attorney reviewing every client-facing draft. Legal judgment stays with your attorneys.' },
       { q: 'Will AI give legal advice to prospects?', a: 'No. Intake workflows gather facts, answer logistical questions and book consultations. Anything that looks like a request for advice is routed to an attorney.' },
-      { q: 'Where should a small firm start?', a: 'Intake. It affects revenue directly, and it frees up the staff time that every other improvement depends on. A readiness review will confirm whether that’s right for you.' },
+      { q: 'Where should a small firm start?', a: 'Usually intake. It brings in revenue directly and frees staff time for everything else. A readiness review will confirm whether it’s the right first step for you.' },
     ],
   },
   {
@@ -197,10 +197,10 @@ export const industries = [
     formIndustry: '', // page covers several trades, so let the visitor choose
     title: 'AI workflow automation for plumbers, lawn care & contractors',
     description:
-      'AI that answers missed calls, books jobs, writes estimates from your notes and chases invoices. Built for plumbers, lawn care companies, general contractors and home service businesses.',
+      'AI for plumbers, lawn care companies, general contractors and other home service businesses: answers missed calls, books jobs, writes estimates from your notes and chases unpaid invoices.',
     eyebrow: 'For plumbers, lawn care, contractors & home services',
     headline: 'Book more jobs. Do less paperwork.',
-    sub: 'We help plumbers, lawn care crews, contractors and other field-service businesses use AI properly: answering every call and message, writing estimates from your notes, and keeping invoices and reviews moving while you’re on the job.',
+    sub: 'We set up AI for plumbers, lawn care crews, contractors and other field-service businesses. It answers calls and messages, writes estimates from your notes, and sends invoices and review requests while you’re on the job.',
     board: {
       setting: 'A Wednesday for a 5-truck plumbing company',
       day: [
@@ -218,7 +218,7 @@ export const industries = [
         { t: '12:00', text: 'Reminders sent on 5 overdue invoices', by: 'auto' },
       ],
     },
-    painsHeading: 'You started the business to do the work, not the admin.',
+    painsHeading: 'Every hour of admin is an hour off the tools.',
     pains: [
       'Calls come in while you’re under a sink or on a mower, and the customer books whoever picks up.',
       'Estimates get written at the kitchen table at 9pm, and half never get a follow-up.',
@@ -243,8 +243,8 @@ export const industries = [
     ],
     tools: ['Jobber', 'Housecall Pro', 'ServiceTitan', 'Buildertrend', 'QuickBooks', 'Google Business Profile', 'Google Calendar', 'ChatGPT', 'Stripe'],
     faq: [
-      { q: 'Will customers know they’re texting with AI?', a: 'We recommend saying so in the first message. Most customers just want a fast answer and a booked time, and anything the assistant can’t handle is passed to you.' },
-      { q: 'My crew isn’t into technology. Do they need to learn something new?', a: 'Very little. Most of it runs in the background. Anything your crew touches works by text message or the field app they already use.' },
+      { q: 'Will customers know they’re texting with AI?', a: 'We recommend saying so in the first message. Customers get a quick answer and a booked time, and anything the assistant can’t handle is passed to you.' },
+      { q: 'My crew isn’t into technology. Do they need to learn something new?', a: 'Very little. The workflows run in the background, and anything your crew touches works by text message or in the field app they already use.' },
       { q: 'Do you work with general contractors as well as service trades?', a: 'Yes. For contractors we focus on client progress updates, sub and supplier coordination, change orders and estimating.' },
     ],
   },
@@ -257,10 +257,10 @@ export const industries = [
     formIndustry: 'Salon, spa or studio',
     title: 'AI workflow automation for salons, spas & studios',
     description:
-      'AI that answers booking messages, fills cancellations, wins back lapsed clients and collects reviews. Built for salons, barbershops, spas and studios.',
+      'AI for salons, barbershops, spas and studios: answers booking messages, fills cancellations, brings back lapsed clients and asks for reviews.',
     eyebrow: 'For salons, barbershops, spas & studios',
     headline: 'Fuller books, without a busier front desk.',
-    sub: 'We help salons, spas and studios use AI properly: answering booking messages day and night, bringing lapsed regulars back and filling cancellations, so your team can focus on the client in the chair.',
+    sub: 'We set up AI for salons, spas and studios to answer booking messages around the clock, bring lapsed regulars back and fill cancellations. Your team stays with the client in the chair.',
     board: {
       setting: 'A Friday at a 7-chair salon',
       day: [
@@ -278,7 +278,7 @@ export const industries = [
         { t: '9:06', text: 'Color-correction question passed to the front desk', by: 'needs' },
       ],
     },
-    painsHeading: 'Every empty chair is lost revenue. Every message is a pause.',
+    painsHeading: 'Empty chairs cost money. So do unanswered messages.',
     pains: [
       'Instagram and website messages asking about prices and availability go unanswered for hours.',
       'No-shows and late cancellations leave expensive gaps in the book.',
@@ -297,15 +297,15 @@ export const industries = [
     ],
     beforeAfter: [
       ['Booking messages', 'Answered between clients, hours later', 'Answered and booked in minutes, day or night'],
-      ['Cancellations', 'An empty slot and lost revenue', 'Offered to the waitlist and usually refilled'],
-      ['Lapsed regulars', 'Quietly gone', 'A personal note at the right time'],
+      ['Cancellations', 'An empty slot and lost revenue', 'Offered to clients on the waitlist'],
+      ['Lapsed regulars', 'Gone before anyone notices', 'A personal note at the right time'],
       ['Reviews', 'Whenever someone remembers', 'Requested after every happy visit'],
     ],
     tools: ['Square Appointments', 'Vagaro', 'Boulevard', 'GlossGenius', 'Fresha', 'Mindbody', 'Instagram', 'Google Business Profile', 'ChatGPT'],
     faq: [
       { q: 'Will clients find AI replies impersonal?', a: 'Not when they sound like you. We train the assistant on your services, prices and tone, keep replies short, and hand anything personal or tricky to your team.' },
       { q: 'We already use booking software with reminders. What else is there?', a: 'Booking tools handle the basics. We add what they leave out: answering messages on social, win-back campaigns, review follow-up, stock alerts and payroll prep.' },
-      { q: 'Does this work for a single-chair studio?', a: 'Yes. Solo stylists often benefit most, because there’s no front desk to fall back on.' },
+      { q: 'Does this work for a single-chair studio?', a: 'Yes. A solo stylist has no front desk, so automatic replies and reminders cover the most ground.' },
     ],
   },
 ];

@@ -86,7 +86,7 @@ ${ind.beforeAfter.map(([task, before, after]) => `        <tr><th scope="row">${
   <div class="container">
     <div class="section-intro section-intro--dark">
       <h2 id="services-heading" class="section-title">How we work with your ${team}.</h2>
-      <p>Most ${team === 'firm' ? 'firms' : 'businesses'} start with a readiness review. You can also start at any step.</p>
+      <p>A readiness review is the usual first step, but you can start at any stage.</p>
     </div>
     <ol class="track">
 ${services.map(([ic, t, d], n) => `      <li class="track__step"><span class="track__num">${String(n + 1).padStart(2, '0')}</span><h3>${icon(ic, { size: 22 })}${esc(t)}</h3><p>${esc(d)}</p></li>`).join('\n')}

@@ -3,6 +3,14 @@
 ## Always Do First
 - **Invoke the `frontend-design` skill** before writing any frontend code, every session, no exceptions.
 
+## Web Copy
+- Any time you write or change copy that appears on the site (headlines, body text, FAQs, form labels, buttons, meta descriptions, error and success messages), run two passes before finishing:
+  1. **`natural-precise-prose` skill** — make the copy specific, precise and plain.
+  2. **`humanizer` skill** — remove AI-sounding patterns and verify with its scanner.
+- Copy lives in `src/content/industries.mjs`, `src/pages/home.mjs`, `src/pages/industry.mjs`, `src/layout.mjs`, `build.mjs` (thanks and 404 pages) and the messages in `public/js/site.js` and `server.mjs`. Run `npm run build` afterwards.
+- Keep the brand lines exactly as written: "Less grunt work. More great work.", "Intelligent workflow automation for businesses with better things to do.", "Reclaim your time", "Explore our solutions".
+- If either skill isn't available, say so and ask before writing copy without it.
+
 ## Reference Images
 - If a reference image is provided: match layout, spacing, typography, and color exactly. Swap in placeholder content (images via `https://placehold.co/`, generic copy). Do not improve or add to the design.
 - If no reference image: design from scratch with high craft (see guardrails below).
